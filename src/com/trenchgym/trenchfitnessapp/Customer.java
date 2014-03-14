@@ -29,6 +29,10 @@ public class Customer extends ParseObject {
     }
 
     // Getters
+    
+    /**
+     * @return the customer id.
+     */
     public int getCustomerID() {
 	return getInt(DatabaseHelper.CUSTOMER_KEY_ID);
     }
