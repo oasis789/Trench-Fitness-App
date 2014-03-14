@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/svMain_MemberActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rlMain_MemberActivity"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvCustomerHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/bCancelMember"
+            android:gravity="center|center_horizontal"
+            android:padding="5dp"
+            android:text="Customer Details"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/bSaveMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/bCancelMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/bSaveMember"
+            android:text="Cancel" />
+
+        <RelativeLayout
+            android:id="@+id/rlImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCustomerHeader"
+            android:layout_centerHorizontal="true" >
+
+            <ImageView
+                android:id="@+id/ivMemberPicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_launcher" >
+            </ImageView>
+
+            <RelativeLayout
+                android:id="@+id/rlName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ivMemberPicture"
+                android:layout_alignTop="@id/ivMemberPicture"
+                android:layout_toRightOf="@+id/ivMemberPicture" >
+
+                <TextView
+                    android:id="@+id/tvfName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/etfName"
+                    android:layout_margin="5dp"
+                    android:gravity="bottom"
+                    android:text="First Name" />
+
+                <EditText
+                    android:id="@+id/etfName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/tvfName"
+                    android:inputType="textPersonName" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/tvlName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/etlName"
+                    android:layout_margin="5dp"
+                    android:gravity="bottom"
+                    android:text="Last Name" />
+
+                <EditText
+                    android:id="@+id/etlName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/etfName"
+                    android:layout_below="@+id/etfName"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/tvlName"
+                    android:ems="10"
+                    android:inputType="textPersonName" >
+                </EditText>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/rlImage"
+            android:layout_below="@+id/rlImage"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bSetDob"
+                android:layout_alignTop="@+id/bSetDob"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:gravity="center|center_vertical"
+                android:text="Date Of Birth" />
+
+            <Button
+                android:id="@+id/bSetDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvDob"
+                android:text="Set Date Of Birth" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llSubMain_MemberActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/rlImage"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rlDob"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rlSubLeftMain_MemberActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0.5"
+                android:gravity="bottom" >
+
+                <TextView
+                    android:id="@+id/tvPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/etPhoneNumber"
+                    android:gravity="bottom"
+                    android:text="Phone Number"
+                    android:layout_marginBottom="5dp" />
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvPhoneNumber"
+                    android:inputType="phone"
+                    android:maxLength="11" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/tvEmergencyNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/etEmergencyNumber"
+                    android:layout_alignLeft="@+id/tvPhoneNumber"
+                    android:layout_alignRight="@+id/tvPhoneNumber"
+                    android:gravity="bottom"
+                    android:text="Emergency Phone Number" />
+
+                <EditText
+                    android:id="@+id/etEmergencyNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/etPhoneNumber"
+                    android:layout_below="@+id/etPhoneNumber"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvEmergencyNumber"
+                    android:inputType="phone"
+                    android:maxLength="11" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSubRightMain_MemberActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0.5"
+                android:gravity="bottom" >
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/etAddress"
+                    android:gravity="bottom"
+                    android:text="Address" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvAddress"
+                    android:inputType="textPostalAddress" />
+
+                <TextView
+                    android:id="@+id/tvPostCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/etPostCode"
+                    android:layout_alignLeft="@+id/tvAddress"
+                    android:gravity="bottom"
+                    android:text="Post Code" />
+
+                <EditText
+                    android:id="@+id/etPostCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/etAddress"
+                    android:layout_below="@+id/etAddress"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvPostCode"
+                    android:inputType="text" >
+                </EditText>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMedicalConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/rlImage"
+            android:layout_below="@+id/llSubMain_MemberActivity"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tvMedicalConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Medical Conditions" />
+
+            <EditText
+                android:id="@+id/etMedicalConditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvMedicalConditions"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical" >
+            </EditText>
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/svMembership"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlMedicalConditions"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="5dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tvMembershipHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Membership Details"
+                    android:textSize="34sp" />
+
+                <LinearLayout
+                    android:id="@+id/llMembershipSetup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/bAddMembership"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/bAddMembership"
+                    android:layout_toLeftOf="@+id/bAddMembership"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Start Date" />
+
+                    <Button
+                        android:id="@+id/bSetStartDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Today" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Duration" />
+
+                    <Spinner
+                        android:id="@+id/sSetDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawSelectorOnTop="true" />
+                   
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bAddMembership"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tvMembershipHeader"
+                    android:layout_margin="5dp"
+                    android:text="Add Membership" />
+
+                <TableLayout
+                    android:id="@+id/tlMembership"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/bAddMembership"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:padding="5dp"
+                    android:stretchColumns="*" >
+
+                    <TableRow
+                        android:id="@+id/trHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Membership No."
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Start Date"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="End Date"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Duration"
+                            android:textSize="25sp" />
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</ScrollView>

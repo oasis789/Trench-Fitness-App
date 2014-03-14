@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/etSearchField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bSearch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/bSearch"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/bSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Search" />
+
+    <RadioGroup
+        android:id="@+id/rgSearchParameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etSearchField"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="4" >
+
+        <RadioButton
+            android:id="@+id/rID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:checked="true"
+            android:gravity="center_vertical|start|right|end"
+            android:text="ID" />
+
+        <RadioButton
+            android:id="@+id/rlName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Last Name" />
+
+        <RadioButton
+            android:id="@+id/rPostCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="PostCode" />
+        
+        <RadioButton
+            android:id="@+id/rDob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Date Of Birth" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rlSearchResults"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rgSearchParameter"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tvSearchResultsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bClearResults"
+            android:layout_alignTop="@+id/bClearResults"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Search Results"
+            android:textSize="24sp" />
+        
+        <Button
+            android:id="@+id/bClearResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Clear Results" />
+
+        <ListView
+            android:id="@+id/listViewSearchResults"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/bClearResults"
+            android:divider="#000000"
+            android:dividerHeight="0.1dp"
+            android:paddingTop="5dp" >
+        </ListView>
+
+        <Button
+            android:id="@+id/bGetAllCustomers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Get All Customers" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

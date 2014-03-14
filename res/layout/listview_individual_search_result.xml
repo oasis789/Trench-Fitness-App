@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/ivSearchResultPicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvSearchResultID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivSearchResultPicture"
+        android:layout_alignRight="@+id/ivSearchResultPicture"
+        android:layout_below="@+id/ivSearchResultPicture"
+        android:gravity="center"
+        android:text="ID" />
+
+    <LinearLayout
+        android:id="@+id/llSearchResultsSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvSearchResultID"
+        android:layout_alignTop="@+id/ivSearchResultPicture"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/ivSearchResultPicture"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+        <TextView
+            android:id="@+id/tvSearchResultFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Full Name" />
+
+        <TextView
+            android:id="@+id/tvSearchResultAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Full Address inc PCode" />
+
+        <TextView
+            android:id="@+id/tvSearchResultsDob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Date Of Birth: " />
+    </LinearLayout>
+
+</RelativeLayout>
