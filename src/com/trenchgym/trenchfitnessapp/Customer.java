@@ -15,7 +15,8 @@ import com.parse.*;
 
 @ParseClassName(DatabaseHelper.CUSTOMER_TABLE_NAME)
 public class Customer extends ParseObject {
-
+//New Comment
+    //Another Comment
     public static final String IMAGE_FILE_EXTENSION = ".png";
     public static final String IMAGE_ROOT = Environment
 	    .getExternalStorageDirectory().toString()
@@ -37,9 +38,6 @@ public class Customer extends ParseObject {
 	return getInt(DatabaseHelper.CUSTOMER_KEY_ID);
     }
 
-    /**
-     * @return the customer's first name.
-     */
     public String getfName() {
 	return getString(DatabaseHelper.CUSTOMER_KEY_FIRST_NAME);
     }
